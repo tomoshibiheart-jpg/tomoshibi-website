@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tomoshibi-inc.co.jp/sitemap.xml
