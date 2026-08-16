@@ -4,14 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>コーチング | 株式会社燈心</title>
-<meta name="description" content="人生を整えるライフコーチングと、在り方や越境体験を届ける研修。個人から企業まで本質に向き合う対話を。">
+<meta name="description" content="人生を整えるライフコーチング／キャリアコーチング。月4回39,800円・月2回20,000円。30分の無料体験実施中。営業コーチング・法人研修も対応。">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="コーチング | 株式会社燈心">
-<meta property="og:description" content="人生を整えるライフコーチングと、在り方や越境体験を届ける研修。個人から企業まで本質に向き合う対話を。">
+<meta property="og:description" content="人生を整えるライフコーチング／キャリアコーチング。月4回39,800円・月2回20,000円。30分の無料体験実施中。営業コーチング・法人研修も対応。">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary">
-
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"コーチング","description":"人生を整えるライフコーチング／キャリアコーチング。月4回39,800円・月2回20,000円。30分の無料体験実施中。営業コーチング・法人研修も対応。","provider":{"@type":"Organization","name":"株式会社燈心"},"areaServed":"JP"}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -301,11 +303,142 @@ footer{background:var(--ink);color:var(--paper);padding:78px 34px 38px;position:
   .nw{white-space:normal!important}
 }
 
+/* ===== v2 ADDITIONS ===== */
+/* scroll progress */
+#prg{position:fixed;top:0;left:0;height:2px;width:0;z-index:950;
+  background:linear-gradient(90deg,var(--gold),var(--ember-l),var(--ember));transition:width .12s linear}
+
+/* soft paper texture band */
+.blk{position:relative}
+.blk.alt::before,.blk.warm::before{content:'';position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:radial-gradient(ellipse at 12% 0%,rgba(255,163,70,.10),transparent 46%),
+             radial-gradient(ellipse at 88% 100%,rgba(184,131,42,.09),transparent 48%)}
+.blk .wrap{position:relative;z-index:1}
+
+/* section divider — flame line */
+.divider{display:flex;align-items:center;justify-content:center;gap:14px;padding:0 0 6px}
+.divider .ln{height:1px;width:min(120px,22vw);background:linear-gradient(90deg,transparent,var(--line))}
+.divider .ln.r{background:linear-gradient(90deg,var(--line),transparent)}
+.divider svg{opacity:.65}
+
+/* icon feature */
+.frow{align-items:flex-start}
+.fic{flex-shrink:0;width:62px;height:62px;border-radius:18px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(145deg,rgba(255,163,70,.18),rgba(184,131,42,.1));border:1px solid rgba(224,83,10,.18);
+  transition:transform .55s var(--e2),box-shadow .45s}
+.frow:hover .fic{transform:translateY(-5px) rotate(-4deg);box-shadow:0 14px 30px rgba(224,83,10,.18)}
+.fic svg{width:26px;height:26px;stroke:var(--ember);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.fidx{font-size:10.5px;letter-spacing:.24em;color:var(--gold);font-weight:700;margin-bottom:8px;display:block}
+
+/* strength grid */
+.stgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:20px;max-width:960px;margin:0 auto}
+.stcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:38px 28px;position:relative;overflow:hidden;
+  transition:transform .55s var(--e1),box-shadow .45s,border-color .35s}
+.stcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--ember-l),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .55s var(--e1)}
+.stcard:hover{transform:translateY(-9px);box-shadow:0 26px 58px rgba(34,25,16,.12);border-color:rgba(224,83,10,.26)}
+.stcard:hover::before{transform:scaleX(1)}
+.stcard .no{position:absolute;right:20px;top:14px;font-family:'Zen Old Mincho',serif;font-size:52px;
+  font-weight:700;color:rgba(224,83,10,.07);line-height:1}
+.stcard .ic{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(145deg,rgba(255,163,70,.2),rgba(184,131,42,.1));margin-bottom:18px}
+.stcard .ic svg{width:22px;height:22px;stroke:var(--ember);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.stcard h4{font-size:17px;font-weight:600;letter-spacing:.07em;margin-bottom:12px;line-height:1.75;text-wrap:balance}
+.stcard p{font-size:13.5px;line-height:2.05;color:var(--ink2);text-wrap:balance}
+
+/* PRICE */
+.prgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(266px,1fr));gap:22px;max-width:960px;margin:0 auto}
+.prcard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:40px 30px 34px;
+  display:flex;flex-direction:column;position:relative;overflow:hidden;
+  transition:transform .55s var(--e1),box-shadow .45s,border-color .35s}
+.prcard:hover{transform:translateY(-9px);box-shadow:0 28px 60px rgba(34,25,16,.13);border-color:rgba(224,83,10,.3)}
+.prcard.hi{border-color:rgba(224,83,10,.34);box-shadow:0 18px 44px rgba(224,83,10,.12)}
+.prcard.hi::after{content:'おすすめ';position:absolute;top:16px;right:-30px;transform:rotate(45deg);
+  background:linear-gradient(135deg,var(--ember-l),var(--ember));color:#fff;font-size:10px;letter-spacing:.14em;
+  padding:5px 34px;font-weight:600}
+.prcard .pn{font-family:'Zen Old Mincho',serif;font-size:20px;font-weight:600;letter-spacing:.09em;margin-bottom:10px;line-height:1.7}
+.prcard .pl{font-size:12.5px;line-height:1.95;color:var(--ink3);margin-bottom:22px;text-wrap:balance}
+.prtab{border-top:1px solid var(--line);margin-bottom:20px}
+.prrow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid var(--line)}
+.prrow .lb{font-size:12.5px;color:var(--ink2);letter-spacing:.04em;white-space:nowrap}
+.prrow .vl{font-family:'Zen Old Mincho',serif;font-size:20px;font-weight:600;letter-spacing:.02em;
+  background:linear-gradient(174deg,#FFB93D,var(--ember-l) 45%,#C93A00);
+  -webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+.prrow .vl small{font-size:11px;color:var(--ink3);-webkit-text-fill-color:var(--ink3);margin-left:3px;font-family:'Zen Kaku Gothic New',sans-serif}
+.prcard .pnote{font-size:12px;line-height:1.95;color:var(--ink3);margin-top:auto;text-wrap:balance}
+.prcard .pfeat{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:20px}
+.prcard .pfeat li{font-size:12.5px;line-height:1.85;color:var(--ink2);padding-left:20px;position:relative;text-wrap:balance}
+.prcard .pfeat li::before{content:'';position:absolute;left:2px;top:.62em;width:7px;height:7px;border-radius:50%;
+  background:linear-gradient(135deg,var(--ember-l),var(--ember))}
+
+/* free trial banner */
+.trial{max-width:860px;margin:56px auto 0;border-radius:24px;padding:44px 38px;text-align:center;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#FFF3E2,#FFE6C9);border:1px solid rgba(224,83,10,.2)}
+.trial::before{content:'';position:absolute;left:50%;top:-40%;transform:translateX(-50%);width:min(520px,90%);height:340px;
+  background:radial-gradient(ellipse,rgba(255,163,70,.34),transparent 68%);pointer-events:none;animation:brth 6s ease-in-out infinite}
+.trial-in{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
+.trial .tg{display:inline-flex;align-items:center;gap:8px;padding:7px 18px;border-radius:100px;background:#fff;
+  font-size:11px;letter-spacing:.16em;color:var(--ember);font-weight:700;margin-bottom:18px;box-shadow:0 4px 14px rgba(224,83,10,.14)}
+.trial .tg .dot{width:6px;height:6px;border-radius:50%;background:var(--ember);animation:pls 2s ease-in-out infinite}
+@keyframes pls{0%,100%{opacity:1;transform:scale(1);box-shadow:0 0 0 0 rgba(224,83,10,.4)}
+  50%{opacity:.55;transform:scale(.78);box-shadow:0 0 0 7px rgba(224,83,10,0)}}
+.trial h3{font-family:'Zen Old Mincho',serif;font-size:clamp(20px,3vw,30px);font-weight:600;letter-spacing:.1em;
+  line-height:1.9;margin-bottom:14px;text-wrap:balance}
+.trial p{font-size:13.5px;line-height:2.1;color:var(--ink2);margin-bottom:30px;text-wrap:balance}
+
+/* recommend chips */
+.chips{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;max-width:820px;margin:0 auto}
+.chip{background:#fff;border:1px solid var(--line);border-radius:100px;padding:12px 22px;font-size:13.5px;
+  color:var(--ink2);letter-spacing:.04em;transition:transform .45s var(--e2),border-color .3s,color .3s,box-shadow .4s}
+.chip:hover{transform:translateY(-4px);border-color:rgba(224,83,10,.34);color:var(--ink);box-shadow:0 12px 26px rgba(34,25,16,.08)}
+.chip b{color:var(--ember);font-weight:600}
+
+/* inline LP link */
+.lplink{display:inline-flex;align-items:center;gap:9px;padding:15px 32px;border-radius:100px;font-size:13px;
+  letter-spacing:.11em;text-decoration:none;font-weight:600;color:#fff;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--ember-l),var(--ember));box-shadow:0 8px 24px rgba(224,83,10,.26);
+  transition:transform .5s var(--e1),box-shadow .45s}
+.lplink:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(224,83,10,.4)}
+.lplink i{font-style:normal;transition:transform .45s var(--e1)}
+.lplink:hover i{transform:translateX(5px)}
+.lpbar{max-width:860px;margin:60px auto 0;background:#fff;border:1px solid var(--line);border-radius:22px;
+  padding:34px 34px;display:flex;align-items:center;justify-content:space-between;gap:26px;
+  box-shadow:0 14px 40px rgba(34,25,16,.07)}
+.lpbar .tx h4{font-family:'Zen Old Mincho',serif;font-size:18px;font-weight:600;letter-spacing:.08em;margin-bottom:8px;line-height:1.7}
+.lpbar .tx p{font-size:12.5px;line-height:1.95;color:var(--ink2);text-wrap:balance}
+
+/* koyoribi mood */
+.mood{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:920px;margin:0 auto}
+.mcard{border-radius:20px;padding:34px 24px;text-align:center;border:1px solid var(--line);background:#fff;
+  transition:transform .55s var(--e1),box-shadow .45s,border-color .35s}
+.mcard:hover{transform:translateY(-8px);box-shadow:0 22px 50px rgba(34,25,16,.1);border-color:rgba(224,83,10,.26)}
+.mcard .ic{width:52px;height:52px;margin:0 auto 16px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle,rgba(255,163,70,.24),rgba(255,163,70,.06))}
+.mcard .ic svg{width:24px;height:24px;stroke:var(--ember);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.mcard h4{font-family:'Zen Old Mincho',serif;font-size:16px;font-weight:600;letter-spacing:.08em;margin-bottom:10px;line-height:1.7}
+.mcard p{font-size:12.5px;line-height:1.95;color:var(--ink2);text-wrap:balance}
+
+@media(max-width:900px){
+  .frow{flex-direction:row;gap:18px;align-items:flex-start}
+  .fic{width:50px;height:50px;border-radius:15px}
+  .fic svg{width:22px;height:22px}
+  .lpbar{flex-direction:column;text-align:center;padding:30px 24px;gap:20px}
+  .trial{padding:34px 24px;margin-top:40px}
+  .prcard{padding:32px 24px 28px}
+  .stcard{padding:30px 24px}
+  .stcard .no{font-size:42px}
+}
+
+.hero-seq{transition:opacity 1s var(--e1),transform 1s var(--e1)}
+.hero-seq.armed{opacity:0;transform:translateY(22px)}
+.hero-seq.armed.on{opacity:1;transform:none}
+
 </style>
 </head>
 <body>
 <div id="ld"><div class="fl"></div></div>
 <div id="cg"></div>
+<div id="prg"></div>
 
 <nav>
   <a href="index.html" class="nvl"><img src="data:image/jpeg;base64,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" alt="株式会社燈心"><b>株式会社燈心</b></a>
@@ -314,7 +447,7 @@ footer{background:var(--ink);color:var(--paper);padding:78px 34px 38px;position:
     <li><a href="index.html#service">SERVICE</a></li>
     <li><a href="recruit.html">人材紹介</a></li>
     <li><a href="koyoribi.html">こよりび</a></li>
-    <li><a href="https://forms.gle/AdstYFuuyrrXZKeB6" target="_blank" class="ncta">まずは話してみる</a></li>
+    <li><a href="https://forms.gle/AdstYFuuyrrXZKeB6" target="_blank" class="ncta">無料体験を申し込む</a></li>
   </ul>
   <button class="burger" aria-label="menu"><i></i><i></i><i></i></button>
 </nav>
@@ -323,7 +456,7 @@ footer{background:var(--ink);color:var(--paper);padding:78px 34px 38px;position:
   <a href="index.html#service">SERVICE</a>
   <a href="recruit.html">人材紹介</a>
   <a href="koyoribi.html">こよりび</a>
-  <a href="https://forms.gle/AdstYFuuyrrXZKeB6" target="_blank" style="color:var(--ember)">まずは話してみる →</a>
+  <a href="https://forms.gle/AdstYFuuyrrXZKeB6" target="_blank" style="color:var(--ember)">無料体験を申し込む →</a>
 </div>
 
 <section class="shero-p">
@@ -342,92 +475,115 @@ footer{background:var(--ink);color:var(--paper);padding:78px 34px 38px;position:
   </div>
 </section>
 
-<section class="blk">
-  <div class="wrap">
-    <div class="bh rv"><span class="en">Problem</span><span class="ja">こんな時間、ありませんか</span></div>
-    <div class="plist">
-      <div class="pitem rv"><div class="ic">?</div><p><span class="nw">忙しさに追われて、</span><span class="nw">自分が何をしたいのか</span><span class="nw">わからなくなっている。</span></p></div>
-      <div class="pitem rv d1"><div class="ic">?</div><p><span class="nw">頭では分かっているのに、</span><span class="nw">一歩が踏み出せない。</span></p></div>
-      <div class="pitem rv d2"><div class="ic">?</div><p><span class="nw">本音で話せる相手が、</span><span class="nw">周りにいない。</span></p></div>
-    </div>
-  </div>
-</section>
-
+<!-- APPROACH -->
 <section class="blk alt">
   <div class="wrap">
     <div class="bh rv"><span class="en">Approach</span><span class="ja">燈心の対話</span></div>
-    <p class="lead-c rv" style="margin-bottom:64px">
-      <span class="nw">答えを与えるのが</span><span class="nw">コーチングではありません。</span><br class="pcbr">
-      <span class="nw">あなたの中にすでにある答えに、</span><span class="nw">光を当てる時間です。</span>
+    <p class="lead-c rv" style="margin-bottom:66px">
+      <span class="nw">答えを貰うのが</span><span class="nw">コーチングではありません。</span><br class="pcbr">
+      <span class="nw">あなたの心の中の答えを</span><span class="nw">導き出す時間です。</span>
     </p>
 
     <div class="frow rv">
-      <div class="fnum mn">01</div>
+      <div class="fic"><svg viewBox="0 0 24 24"><path d="M12 2.6 14.6 8l5.9.6-4.4 4 1.3 5.8L12 15.4 6.6 18.4 7.9 12.6 3.5 8.6 9.4 8z"/></svg></div>
       <div class="fbody">
-        <h4 class="mn"><span class="nw">アドバイスをしない</span></h4>
-        <p><span class="nw">正解を渡すことは簡単です。</span><span class="nw">けれど人が本当に動くのは、</span><span class="nw">自分の言葉で答えを</span><span class="nw">見つけた時だけ。</span><span class="nw">私たちは問い続けます。</span></p>
+        <span class="fidx">01</span>
+        <h4 class="mn"><span class="nw">圧倒的な体験デザイン</span></h4>
+        <p><span class="nw">アドバイスは最小限。</span><span class="nw">自らが気付くための</span><span class="nw">一歩目を支援します。</span></p>
       </div>
     </div>
+
     <div class="frow rv">
-      <div class="fnum mn">02</div>
+      <div class="fic"><svg viewBox="0 0 24 24"><path d="M4 17.5h16M6.5 13.5h11M9 9.5h6M11.2 5.5h1.6"/></svg></div>
       <div class="fbody">
+        <span class="fidx">02</span>
         <h4 class="mn"><span class="nw">在り方から整える</span></h4>
-        <p><span class="nw">スキルやノウハウの前に、</span><span class="nw">「どう在りたいか」を扱います。</span><span class="nw">土台が整えば、</span><span class="nw">行動は自然に変わります。</span></p>
+        <p><span class="nw">be → do → have の順番で</span><span class="nw">「どう在りたいか」から定めます。</span></p>
       </div>
     </div>
+
     <div class="frow rv">
-      <div class="fnum mn">03</div>
+      <div class="fic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M3.4 12h17.2M12 3.4c2.3 2.4 3.5 5.4 3.5 8.6s-1.2 6.2-3.5 8.6c-2.3-2.4-3.5-5.4-3.5-8.6S9.7 5.8 12 3.4z"/></svg></div>
       <div class="fbody">
-        <h4 class="mn"><span class="nw">越境体験を届ける</span></h4>
-        <p><span class="nw">対話だけでは届かない領域がある。</span><span class="nw">普段の環境を離れる体験を通じて、</span><span class="nw">凝り固まった前提を</span><span class="nw">揺さぶります。</span></p>
+        <span class="fidx">03</span>
+        <h4 class="mn"><span class="nw">越境体験で変わる</span></h4>
+        <p><span class="nw">対話だけでは届かない領域に、</span><span class="nw">普段の環境を離れる体験を通じて、</span><span class="nw">凝り固まった前提を揺さぶります。</span></p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- MENU / PRICE -->
 <section class="blk">
   <div class="wrap">
-    <div class="bh rv"><span class="en">Menu</span><span class="ja">提供メニュー</span></div>
-    <div class="pgrid">
-      <div class="pcard rv">
-        <span class="pt">個人向け</span>
-        <div class="pn mn"><span class="nw">ライフコーチング</span></div>
-        <p class="pd"><span class="nw">キャリア・人間関係・</span><span class="nw">これからの生き方。</span><span class="nw">1対1で、</span><span class="nw">あなたの人生を整えます。</span></p>
+    <div class="bh rv"><span class="en">Menu &amp; Price</span><span class="ja">提供メニューと料金</span></div>
+
+    <div class="prgrid">
+      <div class="prcard hi rv">
+        <div class="pn mn"><span class="nw">ライフコーチング／</span><span class="nw">キャリアコーチング</span></div>
+        <p class="pl"><span class="nw">これからの生き方、</span><span class="nw">キャリア、人間関係。</span><span class="nw">1対1であなたの人生を整えます。</span></p>
+        <ul class="pfeat">
+          <li><span class="nw">1回あたり60分</span></li>
+          <li><span class="nw">オンライン・対面どちらも可</span></li>
+          <li><span class="nw">キャリアの棚卸しにも対応</span></li>
+        </ul>
+        <div class="prtab">
+          <div class="prrow"><span class="lb">月4回</span><span class="vl">39,800<small>円／月</small></span></div>
+          <div class="prrow"><span class="lb">月2回</span><span class="vl">20,000<small>円／月</small></span></div>
+        </div>
+        <p class="pnote"><span class="nw">※ 表示は税込です。</span><span class="nw">まずは30分の無料体験から</span><span class="nw">お試しいただけます。</span></p>
       </div>
-      <div class="pcard rv d1">
-        <span class="pt">個人・法人</span>
+
+      <div class="prcard rv d1">
         <div class="pn mn"><span class="nw">営業コーチング</span></div>
-        <p class="pd"><span class="nw">売る技術ではなく、</span><span class="nw">信頼される在り方から。</span><span class="nw">数字は結果として</span><span class="nw">ついてきます。</span></p>
+        <p class="pl"><span class="nw">話し方と営業戦略立案を中心に。</span><span class="nw">売る技術ではなく、</span><span class="nw">信頼される在り方から整えます。</span></p>
+        <ul class="pfeat">
+          <li><span class="nw">1回あたり60分</span></li>
+          <li><span class="nw">話し方・伝え方の実践改善</span></li>
+          <li><span class="nw">営業戦略の立案と検証</span></li>
+        </ul>
+        <div class="prtab">
+          <div class="prrow"><span class="lb">月4回</span><span class="vl">39,800<small>円／月</small></span></div>
+          <div class="prrow"><span class="lb">月2回</span><span class="vl">20,000<small>円／月</small></span></div>
+        </div>
+        <p class="pnote"><span class="nw">※ 個人向けの料金です。</span><span class="nw">数字は結果として</span><span class="nw">ついてきます。</span></p>
       </div>
-      <div class="pcard rv d2">
-        <span class="pt">法人向け</span>
-        <div class="pn mn"><span class="nw">研修・越境体験</span></div>
-        <p class="pd"><span class="nw">組織に問いを持ち込む研修。</span><span class="nw">フィールドワークを含む</span><span class="nw">越境プログラムも</span><span class="nw">ご相談ください。</span></p>
+
+      <div class="prcard rv d2">
+        <div class="pn mn"><span class="nw">法人研修・越境体験</span></div>
+        <p class="pl"><span class="nw">組織に問いを持ち込む研修。</span><span class="nw">フィールドワークを含む</span><span class="nw">越境プログラムも承ります。</span></p>
+        <ul class="pfeat">
+          <li><span class="nw">パッケージは柔軟に対応</span></li>
+          <li><span class="nw">目的・人数に合わせて設計</span></li>
+          <li><span class="nw">単発／継続どちらも可</span></li>
+        </ul>
+        <div class="prtab">
+          <div class="prrow"><span class="lb">料金</span><span class="vl">要相談</span></div>
+        </div>
+        <p class="pnote"><span class="nw">※ パッケージ内容によって</span><span class="nw">価格は変動します。</span><span class="nw">まずはご要望をお聞かせください。</span></p>
+      </div>
+    </div>
+
+    <div class="trial rv">
+      <div class="trial-in">
+        <span class="tg"><span class="dot"></span>30分無料コーチング体験 実施中</span>
+        <h3 class="mn"><span class="nw">合うかどうかは、</span><span class="nw">一度話せばわかります。</span></h3>
+        <p><span class="nw">お申し込みはフォームから30秒。</span><span class="nw">オンラインで受けられます。</span><br class="pcbr"><span class="nw">その場での契約のお願いは一切ありません。</span></p>
+        <a href="https://forms.gle/AdstYFuuyrrXZKeB6" target="_blank" class="btn btn-p mag"><span>無料体験を申し込む</span><span class="ar">→</span></a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FLOW -->
 <section class="blk warm">
   <div class="wrap">
     <div class="bh rv"><span class="en">Flow</span><span class="ja">はじめ方</span></div>
     <div class="flow">
-      <div class="fstep rv"><div class="st">STEP 01</div><h5 class="mn">お問い合わせ</h5><p><span class="nw">フォームからご連絡ください。</span><span class="nw">悩みが漠然としていても</span><span class="nw">大丈夫です。</span></p></div>
-      <div class="fstep rv"><div class="st">STEP 02</div><h5 class="mn">体験セッション</h5><p><span class="nw">まず一度、</span><span class="nw">対話を体験してください。</span><span class="nw">相性を確かめてから</span><span class="nw">決めていただけます。</span></p></div>
-      <div class="fstep rv"><div class="st">STEP 03</div><h5 class="mn">プラン設計</h5><p><span class="nw">期間・頻度・テーマを</span><span class="nw">一緒に決めます。</span><span class="nw">無理のない形で</span><span class="nw">続けられるように。</span></p></div>
-      <div class="fstep rv"><div class="st">STEP 04</div><h5 class="mn">セッション開始</h5><p><span class="nw">対話を重ねながら、</span><span class="nw">あなた自身の答えを</span><span class="nw">見つけていきます。</span></p></div>
-    </div>
-  </div>
-</section>
-
-<section class="blk">
-  <div class="wrap">
-    <div class="vq rv">
-      <p class="mn">
-        <span class="nw">本気で変えたいと思ったときにしか</span><span class="nw">変わらない。</span><br>
-        <span class="nw">その瞬間に、</span><span class="nw"><span class="hl">隣にいる人</span>でありたい。</span>
-      </p>
-      <span class="sig">藤田 括 — 代表取締役 CEO</span>
+      <div class="fstep rv"><div class="st">STEP 01</div><h5 class="mn">お申し込み</h5><p><span class="nw">フォームからご連絡ください。</span><span class="nw">悩みが漠然としていても</span><span class="nw">大丈夫です。</span></p></div>
+      <div class="fstep rv"><div class="st">STEP 02</div><h5 class="mn">30分の無料体験</h5><p><span class="nw">まず一度、</span><span class="nw">対話を体験してください。</span><span class="nw">相性を確かめてから</span><span class="nw">決めていただけます。</span></p></div>
+      <div class="fstep rv"><div class="st">STEP 03</div><h5 class="mn">プラン設計</h5><p><span class="nw">月2回・月4回から</span><span class="nw">お選びいただけます。</span><span class="nw">無理のない形で</span><span class="nw">続けられるように。</span></p></div>
+      <div class="fstep rv"><div class="st">STEP 04</div><h5 class="mn">セッション開始</h5><p><span class="nw">1回60分の対話を重ねながら、</span><span class="nw">あなた自身の答えを</span><span class="nw">見つけていきます。</span></p></div>
     </div>
   </div>
 </section>
@@ -435,9 +591,9 @@ footer{background:var(--ink);color:var(--paper);padding:78px 34px 38px;position:
 <section class="cta">
   <div class="ffire" data-par="-20"></div>
   <div class="cta-in">
-    <h3 class="mn rv"><span class="nw">まずは一度、</span><span class="nw"><span class="em">話してみる</span>ところから。</span></h3>
-    <p class="rv d1"><span class="nw">体験セッションのご相談も</span><span class="nw">こちらから承ります。</span></p>
-    <a href="https://forms.gle/AdstYFuuyrrXZKeB6" target="_blank" class="btn btn-p mag rv d2"><span>まずは話してみる</span><span class="ar">→</span></a>
+    <h3 class="mn rv"><span class="nw">まずは<span class="em">30分</span>、</span><span class="nw">話してみるところから。</span></h3>
+    <p class="rv d1"><span class="nw">無料コーチング体験を</span><span class="nw">実施しています。</span></p>
+    <a href="https://forms.gle/AdstYFuuyrrXZKeB6" target="_blank" class="btn btn-p mag rv d2"><span>無料体験を申し込む</span><span class="ar">→</span></a>
   </div>
 </section>
 
@@ -472,7 +628,7 @@ footer{background:var(--ink);color:var(--paper);padding:78px 34px 38px;position:
         <tr><th>会社名</th><td>株式会社燈心（Tomoshibi）</td></tr>
         <tr><th>代表者</th><td>代表取締役 CEO　藤田括</td></tr>
         <tr><th>設立</th><td>2026年6月</td></tr>
-        <tr><th>資本金</th><td>1,000,000円</td></tr>
+        <tr><th>資本金</th><td>100万円</td></tr>
         <tr><th>所在地</th><td>東京都荒川区南千住</td></tr>
         <tr><th>法人番号</th><td>9011501033512</td></tr>
         <tr><th>事業内容</th><td>キャリア支援及び人材育成に関する事業<br>コミュニティの企画、運営及び管理<br>有料職業紹介事業<br>書籍、電子書籍その他出版物の企画、制作、販売及び出版業<br>前各号に附帯関連する一切の事業</td></tr>
@@ -575,13 +731,12 @@ function playChars(el,step,base){
 }
 document.querySelectorAll('[data-chars]').forEach(splitChars);
 function kickHero(){
-  var h=document.querySelector('[data-chars]');
+  const h=document.querySelector('[data-chars]');
   if(h)playChars(h,.04,.1);
   document.querySelectorAll('.hero-seq').forEach(function(e,i){
     setTimeout(function(){e.classList.add('on');},700+i*170);
   });
 }
-// ローダーが何らかの理由で load を取りこぼしても必ず解除
 setTimeout(function(){
   var l=document.getElementById('ld');
   if(l&&!l.classList.contains('off')){l.classList.add('off');kickHero();}
@@ -589,25 +744,14 @@ setTimeout(function(){
 
 // ---- REVEAL ----
 (function(){
-  var sel='.rv,.imgrv,.poem-l,.hero-seq,[data-chars-scroll]';
-  var els=[].slice.call(document.querySelectorAll(sel));
-  function show(t){
-    t.classList.add('on');
-    if(t.hasAttribute('data-chars-scroll'))playChars(t,.032,0);
-  }
+  var els=[].slice.call(document.querySelectorAll('.rv,.imgrv,.poem-l,.hero-seq,[data-chars-scroll]'));
+  function show(t){t.classList.add('on');if(t.hasAttribute('data-chars-scroll'))playChars(t,.032,0);}
   if(!('IntersectionObserver' in window)){els.forEach(show);return;}
-  els.forEach(function(el){
-    if(el.hasAttribute('data-chars-scroll'))splitChars(el);
-    el.classList.add('armed');
-  });
+  els.forEach(function(el){if(el.hasAttribute('data-chars-scroll'))splitChars(el);el.classList.add('armed');});
   var io=new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(!e.isIntersecting)return;
-      show(e.target);io.unobserve(e.target);
-    });
+    es.forEach(function(e){if(e.isIntersecting){show(e.target);io.unobserve(e.target);}});
   },{threshold:0.02,rootMargin:'0px 0px -4% 0px'});
   els.forEach(function(el){io.observe(el);});
-  // 安全網1: 初期表示域は即時解放
   function sweep(){
     var vh=innerHeight||document.documentElement.clientHeight;
     els.forEach(function(el){
@@ -618,10 +762,7 @@ setTimeout(function(){
   }
   addEventListener('load',function(){setTimeout(sweep,60);});
   setTimeout(sweep,900);
-  // 安全網2: 何らかの理由で発火しなくても必ず見える
-  setTimeout(function(){
-    els.forEach(function(el){if(!el.classList.contains('on')){show(el);io.unobserve(el);}});
-  },4200);
+  setTimeout(function(){els.forEach(function(el){if(!el.classList.contains('on')){show(el);io.unobserve(el);}});},4200);
 })();
 
 // ---- MAGNETIC ----
@@ -691,6 +832,18 @@ document.querySelectorAll('.mbg').forEach(m=>{
 addEventListener('keydown',e=>{
   if(e.key==='Escape')document.querySelectorAll('.mbg.open').forEach(m=>closeM(m.id));
 });
+
+// ---- SCROLL PROGRESS ----
+(function(){
+  var p=document.getElementById('prg');
+  if(!p)return;
+  function u(){
+    var d=document.documentElement;
+    var h=d.scrollHeight-d.clientHeight;
+    p.style.width=(h>0?(d.scrollTop||document.body.scrollTop)/h*100:0)+'%';
+  }
+  u();addEventListener('scroll',u,{passive:true});addEventListener('resize',u);
+})();
 
 </script>
 </body>
